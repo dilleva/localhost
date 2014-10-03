@@ -1,0 +1,678 @@
+body {
+	background: transparent;
+	font: 14px/1.6 'Helvetica Neue', Helvetica, Arial, sans-serif;
+	margin:0;
+	overflow:hidden;
+}
+
+h1 {
+	font: normal 42px/1.238 'Oswald', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+	color: #eee;
+	text-align: center;
+	margin-top: 20px;
+}
+
+h2 {
+	font: normal 28px/1.357 'Oswald', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+	color: #eee;
+	text-align: center;
+	margin-bottom: 40px;
+}
+
+section {
+	width: 1000px;
+	margin: 60px auto;
+}
+
+.group {
+	width: 460px;
+	float: left;
+	margin-right: 40px;
+}
+
+section .group:last-of-type {
+	margin-right: 0;
+}
+
+/* Micro clearfix hack */
+.clearfix:before, .clearfix:after {
+	content: "";
+	display: table;
+}
+
+.clearfix:after {
+	clear: both;
+}
+
+.clearfix {
+	*zoom: 1;
+}
+
+
+input[type=submit]::-moz-focus-inner {
+  border: 0;
+  padding: 0;
+}
+
+.login-form {
+	margin-bottom: 60px;
+	padding: 20px;
+	position: relative;
+	display: inline-block;
+	zoom: 1; /* ie7 hack for display:inline-block */
+	*display: inline;
+	-moz-border-radius:    10px;
+	-webkit-border-radius: 10px;
+	border-radius:         10px;
+	-moz-box-shadow:    0 1px 2px rgba(0, 0, 0, 0.7), inset 0 1px 0 rgba(255, 255, 255, 0.2);
+	-webkit-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.7), inset 0 1px 0 rgba(255, 255, 255, 0.2);
+	box-shadow:         0 1px 2px rgba(0, 0, 0, 0.7), inset 0 1px 0 rgba(255, 255, 255, 0.2);
+	behavior: url(PIE.htc);
+}
+
+.login-form.nolabel {   /* only required for the demo */
+	margin-bottom: 105px;
+}
+
+.login-form label {
+	color: #ccc;
+	margin-bottom: 10px;
+	font-size: 14px;
+	font-weight: bold;
+	text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.9);
+}
+
+.login-input {
+	width: 398px;
+	height: 20px;
+	padding: 6px 10px;
+	margin-bottom: 20px;
+	font: 14px 'Helvetica Neue', Helvetica, Arial, sans-serif;
+	color: #ccc;
+	outline: none;
+	background-color: #555;
+	border: 1px solid #222;
+	position: relative;
+	-moz-border-radius:    8px;
+	-webkit-border-radius: 8px;
+	border-radius:         8px;
+	-moz-box-shadow:    inset 0 0 1px rgba(0, 0, 0, 0.7), 0 1px 0 rgba(255, 255, 255, 0.1);
+	-webkit-box-shadow: inset 0 0 1px rgba(0, 0, 0, 0.7), 0 1px 0 rgba(255, 255, 255, 0.1);
+	box-shadow:         inset 0 0 1px rgba(0, 0, 0, 0.7), 0 1px 0 rgba(255, 255, 255, 0.1);
+	-moz-background-clip:    padding;
+	-webkit-background-clip: padding-box;
+	background-clip:         padding-box;
+	-moz-transition:    all 0.4s ease-in-out;
+	-webkit-transition: all 0.4s ease-in-out;
+	-o-transition:      all 0.4s ease-in-out;
+	-ms-transition:     all 0.4s ease-in-out;
+	transition:         all 0.4s ease-in-out;
+	behavior: url(PIE.htc);
+}
+
+/* Focus style */
+.login-form .login-input:focus {
+	border: 1px solid #7fbbf9;
+	-moz-box-shadow:    inset 0 0 1px rgba(0, 0, 0, 0.7), 0 0 3px #7fbbf9;
+	-webkit-box-shadow: inset 0 0 1px rgba(0, 0, 0, 0.7), 0 0 3px #7fbbf9;
+	box-shadow:         inset 0 0 1px rgba(0, 0, 0, 0.7), 0 0 3px #7fbbf9;
+}
+
+/* Error style */
+.login-form .login-input:-moz-ui-invalid {
+	border: 1px solid #e00;
+	-moz-box-shadow:    inset 0 0 1px rgba(0, 0, 0, 0.7), 0 0 3px #e00;
+	-webkit-box-shadow: inset 0 0 1px rgba(0, 0, 0, 0.7), 0 0 3px #e00;
+	box-shadow:         inset 0 0 1px rgba(0, 0, 0, 0.7), 0 0 3px #e00;
+}
+
+.login-form .login-input.invalid {
+	border: 1px solid #e00;
+	-moz-box-shadow:    inset 0 0 1px rgba(0, 0, 0, 0.7), 0 0 3px #e00;
+	-webkit-box-shadow: inset 0 0 1px rgba(0, 0, 0, 0.7), 0 0 3px #e00;
+	box-shadow:         inset 0 0 1px rgba(0, 0, 0, 0.7), 0 0 3px #e00;
+}
+
+/* Placeholder style */
+.nolabel ::-webkit-input-placeholder {
+	color: #aaa;
+}
+
+.nolabel input:-moz-placeholder {
+	color: #aaa;
+}
+
+.login-btn {
+	width: 100px;
+	height: 30px;
+	color: #444;
+	font: bold 12px 'Helvetica Neue', Helvetica, Arial, sans-serif;
+	text-shadow: 0 1px 0 rgba(255, 255, 255, 0.5);
+	letter-spacing: 1px;
+	text-align: center;
+	border: 1px solid #888;
+	outline: none;
+	cursor: pointer;
+	position: relative;
+	background-color: #ccc;
+	background-image: -webkit-gradient(linear, left top, left bottom, from(#ededed), to(#888888)); /* Saf4+, Chrome */
+	background-image: -webkit-linear-gradient(top, #ededed, #888888); /* Chrome 10+, Saf5.1+, iOS 5+ */
+	background-image:    -moz-linear-gradient(top, #ededed, #888888); /* FF3.6 */
+	background-image:     -ms-linear-gradient(top, #ededed, #888888); /* IE10 */
+	background-image:      -o-linear-gradient(top, #ededed, #888888); /* Opera 11.10+ */
+	background-image:         linear-gradient(top, #ededed, #888888);
+	-pie-background:          linear-gradient(top, #ededed, #888888); /* IE6-IE9 */
+    -moz-box-shadow:    inset 0 1px 0 rgba(255, 255, 255, 0.7), 0 1px 2px rgba(0, 0, 0, 0.7);
+	-webkit-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.7), 0 1px 2px rgba(0, 0, 0, 0.7);
+	box-shadow:         inset 0 1px 0 rgba(255, 255, 255, 0.7), 0 1px 2px rgba(0, 0, 0, 0.7);
+	-moz-border-radius:    18px;
+	-webkit-border-radius: 18px;
+	border-radius:         18px;
+	-moz-background-clip:    padding;
+	-webkit-background-clip: padding-box;
+	background-clip:         padding-box;
+	behavior: url(PIE.htc);
+}
+
+.login-btn:active {
+	background-color: #aaa;
+	background-image: -webkit-gradient(linear, left top, left bottom, from(#888888), to(#ededed)); /* Saf4+, Chrome */
+	background-image: -webkit-linear-gradient(top, #888888, #ededed); /* Chrome 10+, Saf5.1+, iOS 5+ */
+	background-image:    -moz-linear-gradient(top, #888888, #ededed); /* FF3.6 */
+	background-image:     -ms-linear-gradient(top, #888888, #ededed); /* IE10 */
+	background-image:      -o-linear-gradient(top, #888888, #ededed); /* Opera 11.10+ */
+	background-image:         linear-gradient(top, #888888, #ededed);
+	-pie-background:          linear-gradient(top, #888888, #ededed); /* IE6-IE9 */
+	-moz-box-shadow:    inset 0 0 2px rgba(0, 0, 0, 0.7), 0 1px 0 rgba(255, 255, 255, 0.1);
+	-webkit-box-shadow: inset 0 0 2px rgba(0, 0, 0, 0.7), 0 1px 0 rgba(255, 255, 255, 0.1);
+	box-shadow:         inset 0 0 2px rgba(0, 0, 0, 0.7), 0 1px 0 rgba(255, 255, 255, 0.1);
+}
+
+.forgot {
+	color: #ccc;
+	display: block;
+	margin-bottom: 20px;
+	font-size: 12px;
+	font-style: italic;
+}
+
+.forgot a {
+	color: #63b0f4;
+	-moz-transition:    all 0.4s ease-in-out;
+	-webkit-transition: all 0.4s ease-in-out;
+	-o-transition:      all 0.4s ease-in-out;
+	-ms-transition:     all 0.4s ease-in-out;
+	transition:         all 0.4s ease-in-out;	
+}
+
+.forgot a:hover {
+	color: #fff;
+}
+
+.login-form.tbbar {
+	background-color: #787878;
+	background-image: -webkit-gradient(linear, left top, left bottom, from(#787878), to(#565656)); /* Saf4+, Chrome */
+	background-image: -webkit-linear-gradient(top, #787878, #565656); /* Chrome 10+, Saf5.1+, iOS 5+ */
+	background-image:    -moz-linear-gradient(top, #787878, #565656); /* FF3.6 */
+	background-image:     -ms-linear-gradient(top, #787878, #565656); /* IE10 */
+	background-image:      -o-linear-gradient(top, #787878, #565656); /* Opera 11.10+ */
+	background-image:         linear-gradient(top, #787878, #565656);
+	-pie-background:          linear-gradient(top, #787878, #565656); /* IE6-IE9 */
+}
+
+.tbbar .login-input {
+	border: 1px solid #444;
+	-moz-box-shadow:    inset 0 0 1px rgba(0, 0, 0, 0.7), 0 1px 0 rgba(255, 255, 255, 0.2);
+	-webkit-box-shadow: inset 0 0 1px rgba(0, 0, 0, 0.7), 0 1px 0 rgba(255, 255, 255, 0.2);
+	box-shadow:         inset 0 0 1px rgba(0, 0, 0, 0.7), 0 1px 0 rgba(255, 255, 255, 0.2);
+}
+
+/* Title bar */
+.tbar {
+	font: normal 16px/1 'Helvetica Neue', Helvetica, Arial, sans-serif;
+	color: #ccc;
+	text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.9);
+	padding: 15px;
+	margin: -20px -20px 20px -20px;
+	position: relative;
+	-moz-border-radius:    8px 8px 0 0;
+	-webkit-border-radius: 8px 8px 0 0;
+	border-radius:         8px 8px 0 0;
+	-moz-border-radius:    8px 8px 0 0;
+	-moz-box-shadow:    inset 0 1px 0 rgba(255, 255, 255, 0.2), 0 1px 0 rgba(0, 0, 0, 0.7);
+	-webkit-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.2), 0 1px 0 rgba(0, 0, 0, 0.7);
+	box-shadow:         inset 0 1px 0 rgba(255, 255, 255, 0.2), 0 1px 0 rgba(0, 0, 0, 0.7);
+	behavior: url(PIE.htc);
+}
+
+
+/* Bottom bar */
+.bbar {
+	margin: 20px -20px -20px -20px;
+	padding: 20px;
+	overflow: hidden;
+	position: relative;
+	border-top: 1px solid #3c3c3c;
+	background: #5e5e5e;
+	-moz-border-radius:    0 0 8px 8px;
+	-webkit-border-radius: 0 0 8px 8px;
+	border-radius:         0 0 8px 8px;
+	-moz-box-shadow:    inset 0 1px 0 rgba(255, 255, 255, 0.2);
+	-webkit-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.2);
+	box-shadow:         inset 0 1px 0 rgba(255, 255, 255, 0.2);
+	behavior: url(PIE.htc);
+}
+
+.bbar .forgot {
+	float: left;
+	margin-bottom: 0
+}
+
+.bbar .login-btn {
+	float: right;
+}
+
+
+
+
+/************ Color Styles **************/
+
+/******* Vertical Gradient *******/
+
+/*** Dark Gray ***/
+
+.login-form.vdgray {
+	background-color: #343434;
+	background-image: -webkit-gradient(linear, left top, left bottom, from(#343434), to(#141414)); /* Saf4+, Chrome */
+	background-image: -webkit-linear-gradient(top, #343434, #141414); /* Chrome 10+, Saf5.1+, iOS 5+ */
+	background-image:    -moz-linear-gradient(top, #343434, #141414); /* FF3.6 */
+	background-image:     -ms-linear-gradient(top, #343434, #141414); /* IE10 */
+	background-image:      -o-linear-gradient(top, #343434, #141414); /* Opera 11.10+ */
+	background-image:         linear-gradient(top, #343434, #141414);
+	-pie-background:          linear-gradient(top, #343434, #141414); /* IE6-IE9 */	
+}
+
+.vdgray .login-input {
+	border: 1px solid #141414;
+}
+
+
+
+/*** Dark Blue ***/
+
+.login-form.vdblue {	
+	background-color: #004777;
+	background-image: -webkit-gradient(linear, left top, left bottom, from(#004777), to(#001422)); 
+	background-image: -webkit-linear-gradient(top, #004777, #001422); /* Chrome 10+, Saf5.1+, iOS 5+ */
+	background-image:    -moz-linear-gradient(top, #004777, #001422); /* FF3.6 */
+	background-image:     -ms-linear-gradient(top, #004777, #001422); /* IE10 */
+	background-image:      -o-linear-gradient(top, #004777, #001422); /* Opera 11.10+ */
+	background-image:         linear-gradient(top, #004777, #001422);
+	-pie-background:          linear-gradient(top, #004777, #001422); /* IE6-IE9 */	
+}
+
+.vdblue .login-input {
+	border: 1px solid #001422;
+}
+
+
+
+/*** Dark Green ***/
+
+.login-form.vdgreen {	
+	background-color: #425e1f;
+	background-image: -webkit-gradient(linear, left top, left bottom, from(#425e1f), to(#151e0a)); /* Saf4+, Chrome */
+	background-image: -webkit-linear-gradient(top, #425e1f, #151e0a); /* Chrome 10+, Saf5.1+, iOS 5+ */
+	background-image:    -moz-linear-gradient(top, #425e1f, #151e0a); /* FF3.6 */
+	background-image:     -ms-linear-gradient(top, #425e1f, #151e0a); /* IE10 */
+	background-image:      -o-linear-gradient(top, #425e1f, #151e0a); /* Opera 11.10+ */
+	background-image:         linear-gradient(top, #425e1f, #151e0a);
+	-pie-background:          linear-gradient(top, #425e1f, #151e0a); /* IE6-IE9 */	
+}
+
+.vdgreen .login-input {
+	border: 1px solid #151e0a;
+}
+
+
+
+/*** Dark Purple ***/
+
+.login-form.vdpurple {	
+	background-color: #59456f;
+	background-image: -webkit-gradient(linear, left top, left bottom, from(#59456f), to(#1e1726)); /* Saf4+, Chrome */
+	background-image: -webkit-linear-gradient(top, #59456f, #1e1726); /* Chrome 10+, Saf5.1+, iOS 5+ */
+	background-image:    -moz-linear-gradient(top, #59456f, #1e1726); /* FF3.6 */
+	background-image:     -ms-linear-gradient(top, #59456f, #1e1726); /* IE10 */
+	background-image:      -o-linear-gradient(top, #59456f, #1e1726); /* Opera 11.10+ */
+	background-image:         linear-gradient(top, #59456f, #1e1726);
+	-pie-background:          linear-gradient(top, #59456f, #1e1726); /* IE6-IE9 */	
+}
+
+.vdpurple .login-input {
+	border: 1px solid #1e1726;
+}
+
+
+
+/*** Dark Brown ***/
+
+.login-form.vdbrown {	
+	background-color: #6d4004;
+	background-image: -webkit-gradient(linear, left top, left bottom, from(#6d4004), to(#1b1001)); /* Saf4+, Chrome */
+	background-image: -webkit-linear-gradient(top, #6d4004, #1b1001); /* Chrome 10+, Saf5.1+, iOS 5+ */
+	background-image:    -moz-linear-gradient(top, #6d4004, #1b1001); /* FF3.6 */
+	background-image:     -ms-linear-gradient(top, #6d4004, #1b1001); /* IE10 */
+	background-image:      -o-linear-gradient(top, #6d4004, #1b1001); /* Opera 11.10+ */
+	background-image:         linear-gradient(top, #6d4004, #1b1001);
+	-pie-background:          linear-gradient(top, #6d4004, #1b1001); /* IE6-IE9 */	
+}
+
+.vdbrown .login-input {
+	border: 1px solid #1b1001;
+}
+
+
+
+
+
+
+/******* Horizontal Gradient *******/
+
+/*** Dark Gray ***/
+
+.login-form.hdgray {
+	border: 1px solid #141414;
+	background-color: #141414;
+	background-image: -webkit-gradient(linear, left top, right top, color-stop(0%, #141414), color-stop(50%, #343434), color-stop(100%, #141414)); /* Saf4+, Chrome */
+	background-image: -webkit-linear-gradient(left, #141414, #343434, #141414); /* Chrome 10+, Saf5.1+, iOS 5+ */
+	background-image:    -moz-linear-gradient(left, #141414, #343434, #141414); /* FF3.6 */
+	background-image:     -ms-linear-gradient(left, #141414, #343434, #141414); /* IE10 */
+	background-image:      -o-linear-gradient(left, #141414, #343434, #141414); /* Opera 11.10+ */
+	background-image:         linear-gradient(left, #141414, #343434, #141414);
+	-pie-background:          linear-gradient(left, #141414, #343434, #141414); /* IE6-IE9 */	
+}
+
+.hdgray .login-input {
+	border: 1px solid #141414;
+}
+
+
+
+/*** Dark Blue ***/
+
+.login-form.hdblue {	
+	border: 1px solid #001422;
+	background-color: #001422;
+	background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #001422), color-stop(50%, #004777), color-stop(100%, #001422)); 
+	background-image: -webkit-linear-gradient(left, #001422, #004777, #001422); /* Chrome 10+, Saf5.1+, iOS 5+ */
+	background-image:    -moz-linear-gradient(left, #001422, #004777, #001422); /* FF3.6 */
+	background-image:     -ms-linear-gradient(left, #001422, #004777, #001422); /* IE10 */
+	background-image:      -o-linear-gradient(left, #001422, #004777, #001422); /* Opera 11.10+ */
+	background-image:         linear-gradient(left, #001422, #004777, #001422);
+	-pie-background:          linear-gradient(left, #001422, #004777, #001422); /* IE6-IE9 */	
+}
+
+.hdblue .login-input {
+	border: 1px solid #001422;
+}
+
+
+
+/*** Dark Green ***/
+
+.login-form.hdgreen {	
+	border: 1px solid #151e0a;
+	background-color: #151e0a;
+	background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #151e0a), color-stop(50%, #425e1f), color-stop(100%, #151e0a)); /* Saf4+, Chrome */
+	background-image: -webkit-linear-gradient(left, #151e0a, #425e1f, #151e0a); /* Chrome 10+, Saf5.1+, iOS 5+ */
+	background-image:    -moz-linear-gradient(left, #151e0a, #425e1f, #151e0a); /* FF3.6 */
+	background-image:     -ms-linear-gradient(left, #151e0a, #425e1f, #151e0a); /* IE10 */
+	background-image:      -o-linear-gradient(left, #151e0a, #425e1f, #151e0a); /* Opera 11.10+ */
+	background-image:         linear-gradient(left, #151e0a, #425e1f, #151e0a);
+	-pie-background:          linear-gradient(left, #151e0a, #425e1f, #151e0a); /* IE6-IE9 */	
+}
+
+.hdgreen .login-input {
+	border: 1px solid #151e0a;
+}
+
+
+
+/*** Dark Purple ***/
+
+.login-form.hdpurple {	
+	border: 1px solid #1e1726;
+	background-color: #1e1726;
+	background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, ##1e1726), color-stop(50%, #59456f), color-stop(100%, ##1e1726)); /* Saf4+, Chrome */
+	background-image: -webkit-linear-gradient(left, #1e1726, #59456f, #1e1726); /* Chrome 10+, Saf5.1+, iOS 5+ */
+	background-image:    -moz-linear-gradient(left, #1e1726, #59456f, #1e1726); /* FF3.6 */
+	background-image:     -ms-linear-gradient(left, #1e1726, #59456f, #1e1726); /* IE10 */
+	background-image:      -o-linear-gradient(left, #1e1726, #59456f, #1e1726); /* Opera 11.10+ */
+	background-image:         linear-gradient(left, #1e1726, #59456f, #1e1726);
+	-pie-background:          linear-gradient(left, #1e1726, #59456f, #1e1726); /* IE6-IE9 */	
+}
+
+.hdgreen .login-input {
+	border: 1px solid #1e1726;
+}
+
+
+
+/*** Dark Brown ***/
+
+.login-form.hdbrown {	
+	border: 1px solid #1b1001;
+	background-color: #1b1001;
+	background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #1b1001), color-stop(50%, #6d4004), color-stop(100%, #1b1001)); /* Saf4+, Chrome */
+	background-image: -webkit-linear-gradient(left, #1b1001, #6d4004, #1b1001); /* Chrome 10+, Saf5.1+, iOS 5+ */
+	background-image:    -moz-linear-gradient(left, #1b1001, #6d4004, #1b1001); /* FF3.6 */
+	background-image:     -ms-linear-gradient(left, #1b1001, #6d4004, #1b1001); /* IE10 */
+	background-image:      -o-linear-gradient(left, #1b1001, #6d4004, #1b1001); /* Opera 11.10+ */
+	background-image:         linear-gradient(left, #1b1001, #6d4004, #1b1001);
+	-pie-background:          linear-gradient(left, #1b1001, #6d4004, #1b1001); /* IE6-IE9 */	
+}
+
+.hdbrown .login-input {
+	border: 1px solid #1b1001;
+}
+
+
+
+
+
+
+/******* Top and Bottom bars *******/
+
+/*** Dark Gray ***/
+
+.dgray .tbar {
+	background-color: #454545;
+	background-image: -webkit-gradient(linear, left top, left bottom, from(#454545), to(#1b1b1b)); /* Saf4+, Chrome */
+	background-image: -webkit-linear-gradient(top, #454545, #1b1b1b); /* Chrome 10+, Saf5.1+, iOS 5+ */
+	background-image:    -moz-linear-gradient(top, #454545, #1b1b1b); /* FF3.6 */
+	background-image:     -ms-linear-gradient(top, #454545, #1b1b1b); /* IE10 */
+	background-image:      -o-linear-gradient(top, #454545, #1b1b1b); /* Opera 11.10+ */
+	background-image:         linear-gradient(top, #454545, #1b1b1b);
+	-pie-background:          linear-gradient(top, #454545, #1b1b1b); /* IE6-IE9 */
+}
+
+
+
+/*** Dark Blue ***/
+
+.dblue .tbar {	
+	background-color: #005088;
+	background-image: -webkit-gradient(linear, left top, left bottom, from(#005008), to(#001e33)); 
+	background-image: -webkit-linear-gradient(top, #005088, #001e33); /* Chrome 10+, Saf5.1+, iOS 5+ */
+	background-image:    -moz-linear-gradient(top, #005088, #001e33); /* FF3.6 */
+	background-image:     -ms-linear-gradient(top, #005088, #001e33); /* IE10 */
+	background-image:      -o-linear-gradient(top, #005088, #001e33); /* Opera 11.10+ */
+	background-image:         linear-gradient(top, #005088, #001e33);
+	-pie-background:          linear-gradient(top, #005088, #001e33); /* IE6-IE9 */	
+}
+
+
+
+
+/*** Dark Green ***/
+
+.dgreen .tbar {	
+	background-color: #39511b;
+	background-image: -webkit-gradient(linear, left top, left bottom, from(#39511b), to(#151e0a)); /* Saf4+, Chrome */
+	background-image: -webkit-linear-gradient(top, #39511b, #151e0a); /* Chrome 10+, Saf5.1+, iOS 5+ */
+	background-image:    -moz-linear-gradient(top, #39511b, #151e0a); /* FF3.6 */
+	background-image:     -ms-linear-gradient(top, #39511b, #151e0a); /* IE10 */
+	background-image:      -o-linear-gradient(top, #39511b, #151e0a); /* Opera 11.10+ */
+	background-image:         linear-gradient(top, #39511b, #151e0a);
+	-pie-background:          linear-gradient(top, #39511b, #151e0a); /* IE6-IE9 */		
+}
+
+
+
+/*** Dark Purple ***/
+
+.dpurple .tbar {	
+	background-color: #422752;
+	background-image: -webkit-gradient(linear, left top, left bottom, from(#59456f), to(#1e1726)); /* Saf4+, Chrome */
+	background-image: -webkit-linear-gradient(top, #59456f, #1e1726); /* Chrome 10+, Saf5.1+, iOS 5+ */
+	background-image:    -moz-linear-gradient(top, #59456f, #1e1726); /* FF3.6 */
+	background-image:     -ms-linear-gradient(top, #59456f, #1e1726); /* IE10 */
+	background-image:      -o-linear-gradient(top, #59456f, #1e1726); /* Opera 11.10+ */
+	background-image:         linear-gradient(top, #59456f, #1e1726);
+	-pie-background:          linear-gradient(top, #59456f, #1e1726); /* IE6-IE9 */	
+}
+
+
+
+/*** Dark Brown ***/
+
+.dbrown .tbar {	
+	background-color: #5d3704;
+	background-image: -webkit-gradient(linear, left top, left bottom, from(#5d3704), to(#1b1001)); /* Saf4+, Chrome */
+	background-image: -webkit-linear-gradient(top, #5d3704, #1b1001); /* Chrome 10+, Saf5.1+, iOS 5+ */
+	background-image:    -moz-linear-gradient(top, #5d3704, #1b1001); /* FF3.6 */
+	background-image:     -ms-linear-gradient(top, #5d3704, #1b1001); /* IE10 */
+	background-image:      -o-linear-gradient(top, #5d3704, #1b1001); /* Opera 11.10+ */
+	background-image:         linear-gradient(top, #5d3704, #1b1001);
+	-pie-background:          linear-gradient(top, #5d3704, #1b1001); /* IE6-IE9 */	
+}
+
+
+
+
+
+/******* 3d Style *******/
+
+.login-form.form3d {
+	background-color: #414141;
+	background-image: -webkit-gradient(linear, left top, left bottom, from(0, #282828), to(50px, #414141)); /* Saf4+, Chrome */
+	background-image: -webkit-linear-gradient(top, #282828 0, #414141 50px); /* Chrome 10+, Saf5.1+, iOS 5+ */
+	background-image:    -moz-linear-gradient(top, #282828 0, #414141 50px); /* FF3.6 */
+	background-image:     -ms-linear-gradient(top, #282828 0, #414141 50px); /* IE10 */
+	background-image:      -o-linear-gradient(top, #282828 0, #414141 50px); /* Opera 11.10+ */
+	background-image:         linear-gradient(top, #282828 0, #414141 50px);
+	-pie-background:          linear-gradient(top, #282828 0, #414141 50px); /* IE6-IE9 */
+	-moz-box-shadow:    0 1px 0 #444, 0 2px 0 #666, 0 3px 0 #444, 0 4px 0 #666, 0 5px 0 #444, 0 6px 0 #666, 0 7px 0 #444, 0 8px 0 #666, inset 0 1px 1px rgba(255, 255, 255, 0.3), 0 2px 2px rgba(0, 0, 0, 0.9);
+	-webkit-box-shadow: 0 1px 0 #444, 0 2px 0 #666, 0 3px 0 #444, 0 4px 0 #666, 0 5px 0 #444, 0 6px 0 #666, 0 7px 0 #444, 0 8px 0 #666, inset 0 1px 1px rgba(255, 255, 255, 0.3), 0 2px 2px rgba(0, 0, 0, 0.9);
+	box-shadow:         0 1px 0 #444, 0 2px 0 #666, 0 3px 0 #444, 0 4px 0 #666, 0 5px 0 #444, 0 6px 0 #666, 0 7px 0 #444, 0 8px 0 #666, inset 0 1px 1px rgba(255, 255, 255, 0.3), 0 8px 2px rgba(0, 0, 0, 0.9);
+}
+
+
+
+
+/******* Login form as a bar *******/
+
+.login-form.bar {
+	display: block;
+	width: 480px;
+	padding: 10px;
+	margin: 0 auto;
+	border: 1px solid #222;
+	background-color: #3c3c3c;
+	background-image: -webkit-gradient(linear, left top, left bottom, from(#3c3c3c), to(#1b1b1b)); /* Saf4+, Chrome */
+	background-image: -webkit-linear-gradient(top, #3c3c3c, #1b1b1b); /* Chrome 10+, Saf5.1+, iOS 5+ */
+	background-image:    -moz-linear-gradient(top, #3c3c3c, #1b1b1b); /* FF3.6 */
+	background-image:     -ms-linear-gradient(top, #3c3c3c, #1b1b1b); /* IE10 */
+	background-image:      -o-linear-gradient(top, #3c3c3c, #1b1b1b); /* Opera 11.10+ */
+	background-image:         linear-gradient(top, #3c3c3c, #1b1b1b);
+	-pie-background:          linear-gradient(top, #3c3c3c, #1b1b1b); /* IE6-IE9 */
+	-moz-box-shadow:    0 1px 1px rgba(0, 0, 0, 0.7), inset 0 1px 1px rgba(255, 255, 255, 0.3);
+	-webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.7), inset 0 1px 1px rgba(255, 255, 255, 0.3);
+	box-shadow:         0 1px 1px rgba(0, 0, 0, 0.7), inset 0 1px 1px rgba(255, 255, 255, 0.3);
+}
+
+.login-form.bar .login-input {
+	width: 173px;
+	height: 20px;
+	padding: 6px 10px 6px 35px;
+	margin: 0 5px 0 0;
+	border: 1px solid #222;
+	float: left;
+	-moz-box-shadow:    inset 0 0 1px rgba(0, 0, 0, 0.7), 0 1px 0 rgba(255, 255, 255, 0.1);
+	-webkit-box-shadow: inset 0 0 1px rgba(0, 0, 0, 0.7), 0 1px 0 rgba(255, 255, 255, 0.1);
+	box-shadow:         inset 0 0 1px rgba(0, 0, 0, 0.7), 0 1px 0 rgba(255, 255, 255, 0.1);
+}
+
+.login-form.bar input[type=text] {
+	background: #4c4c4c url(user.png) 10px center no-repeat;
+	-moz-border-radius:    8px 0 0 8px;
+	-webkit-border-radius: 8px 0 0 8px;
+	border-radius:         8px 0 0 8px;
+}
+
+.login-form.bar input[type=password] {
+	background: #4c4c4c url(key.png) 10px center no-repeat;
+	margin-right: 0;
+	padding-right: 45px;
+	-moz-border-radius:    0 8px 8px 0;
+	-webkit-border-radius: 0 8px 8px 0;
+	border-radius:         0 8px 8px 0;
+}
+
+.login-form.bar .login-btn {
+	width: 32px;
+	height: 32px;
+	position: absolute;
+	top: 11px;
+	right: 11px;
+	border: 1px solid #222;
+	background-color: #444;
+	background: url(login.png) center center no-repeat, -webkit-gradient(linear, left top, left bottom, from(#646464), to(#242424)); /* Saf4+, Chrome */
+	background: url(login.png) center center no-repeat, -webkit-linear-gradient(top, #646464, #242424); /* Chrome 10+, Saf5.1+, iOS 5+ */
+	background: url(login.png) center center no-repeat,    -moz-linear-gradient(top, #646464, #242424); /* FF3.6 */
+	background: url(login.png) center center no-repeat,     -ms-linear-gradient(top, #646464, #242424); /* IE10 */
+	background: url(login.png) center center no-repeat,      -o-linear-gradient(top, #646464, #242424); /* Opera 11.10+ */
+	background: url(login.png) center center no-repeat,         linear-gradient(top, #646464, #242424);
+	-pie-background: url(login.png) center center no-repeat,    linear-gradient(top, #646464, #242424); /* IE6-IE9 */
+	-moz-border-radius:    0 8px 8px 0;
+	-webkit-border-radius: 0 8px 8px 0;
+	border-radius:         0 8px 8px 0;
+	-moz-box-shadow:    inset 0 1px 0 rgba(255, 255, 255, 0.3);
+	-webkit-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.3);
+	box-shadow:         inset 0 1px 0 rgba(255, 255, 255, 0.3);
+}
+
+.login-form.bar .login-btn:active {
+	background-color: #242424;
+	background: url(login.png) center center no-repeat, -webkit-gradient(linear, left top, left bottom, from(#242424), to(#646464)); /* Saf4+, Chrome */
+	background: url(login.png) center center no-repeat, -webkit-linear-gradient(top, #242424, #646464); /* Chrome 10+, Saf5.1+, iOS 5+ */
+	background: url(login.png) center center no-repeat,    -moz-linear-gradient(top, #242424, #646464); /* FF3.6 */
+	background: url(login.png) center center no-repeat,     -ms-linear-gradient(top, #242424, #646464); /* IE10 */
+	background: url(login.png) center center no-repeat,      -o-linear-gradient(top, #242424, #646464); /* Opera 11.10+ */
+	background: url(login.png) center center no-repeat,         linear-gradient(top, #242424, #646464);
+	-pie-background: url(login.png) center center no-repeat,    linear-gradient(top, #242424, #646464); /* IE6-IE9 */
+	-moz-box-shadow:    inset 0 0 2px rgba(0, 0, 0, 0.7);
+	-webkit-box-shadow: inset 0 0 2px rgba(0, 0, 0, 0.7);
+	box-shadow:         inset 0 0 2px rgba(0, 0, 0, 0.7);
+}
+
+#loginform {
+	width: 460px;
+	left: 0;
+	right: 0;
+	top: 0;
+	bottom: 0;
+	position: absolute;
+	margin: auto auto;
+	height: 309px;}
